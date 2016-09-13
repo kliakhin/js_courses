@@ -20,12 +20,15 @@ function getPaySum(student) {
 }
 
 var students = {
-    "Vasya": {"isStudent": "true", "totalPay": "true"},
-    "Kolya": {"isStudent": "false", "totalPay": "true"},
-    "Petya": {"isStudent": "false", "totalPay": "true"}
+    "Vasya": {"isStudent": true, "totalPay": true},
+    "Kolya": {"isStudent": false, "totalPay": true},
+    "Petya": {"isStudent": true, "totalPay": true}
 };
 
-console.log(getPaySum(students.Kolya));
+students.forEach(function (entry) {
+   console.log(entry.Vasya.isStudent.toString());
+});
+console.log(getPaySum(students.Petya));
 
 
 
