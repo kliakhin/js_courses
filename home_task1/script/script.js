@@ -10,7 +10,6 @@ function myFunction() {
     var sum = 0.0,
         diff;
 
-    console.log(byHimself);
     if (byHimself || (curMetr != "" || preMetr != "")) {
         diff = curMetr - preMetr;
         if (costBelow != "" && costUnder != "") {
