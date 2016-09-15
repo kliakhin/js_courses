@@ -11,10 +11,10 @@ function myFunction() {
     for (i in array) {
         item = array[i];
         average += item;
-        if (item % 2 == 0) {
+        if (!(item % 2)) {
             even++;
         }
-        if (index % 2 != 0) {
+        if (index % 2) {
             sumEven += item;
         } else if (item < sumExtreme) {
             sumOdd += item;
@@ -33,7 +33,7 @@ function myFunction() {
                 array[i] += 1;
             }
             var suffix = "";
-            if ((i + 1) % sqrt == 0) {
+            if (!((i + 1) % sqrt)) {
                 suffix = ", " + "<br>";
             } else {
                 suffix = ", ";
@@ -49,11 +49,9 @@ function myFunction() {
     function writeResult() {
         document.getElementById("array").innerHTML = "<h3>" + arrayStr + "</h3>";
         document.getElementById("even").innerHTML = "<h3>" + even + "</h3>";
-        document.getElementById("average").innerHTML = "<h3>" + average + "</h3>";
+        document.getElementById("average").innerHTML = "<h3>" + Math.round(average * 100) / 100 + "</h3>";
         document.getElementById("sumEven").innerHTML = "<h3>" + sumEven + "</h3>";
         document.getElementById("sumOdd").innerHTML = "<h3>" + sumOdd + "</h3>";
         document.getElementById("output").style.display = "initial";
     }
 }
-
-
