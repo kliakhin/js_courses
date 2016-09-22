@@ -1,7 +1,7 @@
 function myFunction() {
     var arraySize = parseInt(document.getElementById("size").value),
         arrayStr = "",
-        array = initArray(),
+        array = initArray(arraySize),
         even = 0,
         average = 0,
         sumEven = 0,
@@ -23,12 +23,12 @@ function myFunction() {
     }
     average /= array.length;
     writeResult();
-    function initArray() {
+    function initArray(arraySize) {
         var array = [],
             count = arraySize,
             sqrt = Math.floor(Math.sqrt(arraySize));
         for (var i = 0; i < count; i++) {
-            array[i] = Math.floor(Math.random() * 10);
+            array.push(Math.floor(Math.random() * 10));
             if (array[i] == 0) {
                 array[i] += 1;
             }
