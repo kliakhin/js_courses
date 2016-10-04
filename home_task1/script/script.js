@@ -34,5 +34,5 @@ function myFunction() {
     if (debt != 0) {
         sum = sum + debt;
     }
-    document.getElementById("result").innerHTML = "SUM = " + sum + " uan.";
+    document.getElementById("resultText").innerHTML = "SUM = " + sum + " uan.";
 }
