@@ -12,7 +12,7 @@ function Menu(sSelector) {
         $(this).children(".b-submenu")
             .stop()
             .css("display", "block")
-            .animate({"opacity": 1, "backgroundColor": "#000"}, 500);
+            .animate({"opacity": 1, "backgroundColor": "red"}, 500);
     };
 
     m.hideSubMenu = function () {
@@ -22,13 +22,23 @@ function Menu(sSelector) {
         $(this).children(".b-submenu")
             .stop()
             .css("display", "block")
-            .animate({"opacity": 0, "backgroundColor": "red"}, 500, function () {
+            //background: none repeat scroll 0 0 #EEEEEE;
+            //.css("background", "red")
+            .animate({"opacity": 0, "backgroundColor": "white"}, 500, function () {
                 $(this).css("display", "none");
             });
 
     };
 
+/*
     m.menuItem.mouseover(m.showSubMenu)
         .mouseout(m.hideSubMenu);
+*/
 
+    m.showHideSubMenu = function (event) {
+        event.preventDefault();
+        $(this).children(".b-submenu").stop().slideToggle();
+    };
+
+    m.menuItem.click(m.showHideSubMenu)
 }
